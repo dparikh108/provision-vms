@@ -3,4 +3,4 @@ plugin: redhat.openshift_virtualization.kubevirt
 connections:
   - network_name: default
     namespaces:
-      - automate-provision
+      - automate-vms 

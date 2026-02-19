@@ -42,18 +42,9 @@ spec:
           interfaces:
           - name: default
             masquerade: {}
-{%        if add_net %}
-          - bridge: {}
-            name: bridge-network
-{%        endif %}
       networks:
       - name: default
         pod: {}
-{%      if add_net %}
-      - multus:
-          networkName: default/vm-private-net
-        name: bridge-network
-{%      endif %}
       volumes:
       - dataVolume:
           name: "{{ j2vm_name }}-volume"
